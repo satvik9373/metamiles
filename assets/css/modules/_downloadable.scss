@@ -1,0 +1,165 @@
+.downloadable-cards{
+    padding: 151px 0 136px 0;
+        margin-top: -42px;
+        //border-radius: 40px !important;
+        @media(max-width:768px){
+            @include padding-m;
+            padding-top: 110px !important;
+        }
+    .title{
+        margin-bottom: 57px;
+        position: relative;
+        padding-right: 175px;
+        @media(max-width:768px){
+            margin-bottom: 30px;
+            padding-right: 0;
+        }
+        h2{
+            color: $c-white;
+            @include size-56-11;
+            letter-spacing: 0.04em;
+            margin-bottom: 20px;
+            span{
+                display: inline;
+                @include size-56-11;
+                letter-spacing: 0.04em;
+            }
+        }
+        p{
+            color: $c-white;
+        }
+        span{
+            font-size: 12px;
+            line-height: 1.35;
+            color: $c-white;
+            max-width: 300px;
+            display: block;
+        }
+        a{
+            position: absolute;
+            bottom: -1px;
+            right: 0;
+            z-index: 1;
+            @media(max-width:768px){
+                position: relative;
+                margin-top: 17px;
+            }
+            &:hover{
+                border-color: $c-black;
+                background: $c-00c5 !important;
+            }
+        }
+    }
+    .cards{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -14px;
+        @media(max-width:992px){
+            margin: 0 -10px;
+        }
+        .card{
+            width: 33.33333%;
+            padding: 0 14px;
+            margin-bottom: 24px;
+            @media(max-width:992px){
+                width: 50%;
+                padding: 0 10px;
+            }
+            @media(max-width:556px){
+                width: 100%;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+            .box{
+                display: flex;
+                border-radius: 24px;
+                overflow: hidden;
+                height: 100%;
+                background: $c-black;
+                &:hover{
+                    .img{
+                        img{
+                            transform: scale(1.05);
+                        }
+                    }
+                    .text{
+                        h3{
+                            opacity: 0.7;
+                        }
+                        .btn-arrow-3{
+                            background: #2C2A2A;
+                        }
+                    }
+                }
+                .img{
+                    width: 46.6%;
+                    overflow: hidden;
+                    img{
+                        aspect-ratio: 190/191;
+                        object-fit: cover;   
+                        height: 100%;
+                        transition: all 0.2s;
+                    }
+                }
+                .text{
+                    width: 53.4%;
+                    padding: 16px 16px 50px 16px;
+                    position: relative;
+                    .cat-and-date{
+                        display: flex;
+                        justify-content: space-between;
+                        
+                        padding-right: 7px;
+                        margin-top: -3px;
+                        flex-wrap: wrap;
+                        span{
+                            font-family: $f-sr;
+                            @include size-14-16;
+                            color: $c-white;
+                            margin-right: 10px;
+                            margin-bottom: 11px;
+                            &:last-child{
+                                margin-right: 0;
+                            }
+                            
+                        }
+                    }
+                    h3{
+                        font-family: $f-ssb;
+                        @include font;
+                        color: $c-white;
+                        text-transform: inherit;
+                        margin-bottom: 10px;
+                        transition: all 0.2s;
+                        
+                        
+                        overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:4;
+  word-wrap: break-word;
+                    }
+                    p{
+                        color: $c-white;
+                        @include size-14-16;
+                        margin-bottom: 10px;
+                        @media(max-width:768px){
+                            display: none;
+                        }
+                    }
+                    .btn-arrow-3{
+                        position: absolute;
+                        bottom: 16px;
+                        left: 6px;
+                        z-index: 1;
+                        padding-left: 10px;
+                        
+                    }
+                    
+                }
+            }
+        }
+    }
+}

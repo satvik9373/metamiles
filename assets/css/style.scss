@@ -1,0 +1,40 @@
+@charset "UTF-8";
+@import "vendors/slick.css";
+@import "vendors/bootstrap.min.css";
+@import "vendors/vendor.scss";
+
+@import "vendors/prism-tomorrow.min.css";
+@import "vendors/prism-line-numbers.min.css";
+@import "vendors/splide.min.css";
+
+@import "components/_mixin.scss";
+@import "components/_animation.scss";
+@import "components/_variables.scss";
+@import "components/_reset.scss";
+@import "components/_nav.scss";
+@import "components/_header.scss";
+@import "components/_footer.scss";
+@import "components/_font.scss";
+@import "components/_form.scss";
+
+@import "modules/_banner.scss";
+@import "modules/_carousel.scss";
+@import "modules/_moving-money-forward.scss";
+@import "modules/_CTA.scss";
+@import "modules/_intro-text.scss";
+@import "modules/_text-and-image.scss";
+@import "modules/_payments-game-changer.scss";
+@import "modules/_faqs.scss";
+@import "modules/_tesimonials.scss";
+@import "modules/_news.scss";
+@import "modules/_experts.scss";
+@import "modules/_downloadable.scss";
+@import "modules/_contact.scss";
+@import "modules/_careers.scss";
+@import "modules/_our-story.scss";
+@import "modules/_dev-zone.scss";
+
+
+//
+@import "../fonts/iconfont/style.css";
+

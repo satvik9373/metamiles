@@ -1,0 +1,123 @@
+.plinthos-crt-toggle {
+    appearance: none;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    background: #02D7B2;
+    color: #212323;
+    border-radius: 24px;
+    border: none;
+    height: 48px;
+    width: 48px;
+    padding: 5px;
+    cursor: pointer;
+    transition: opacity 1s;
+}
+
+.plinthos-crt-toggle.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.plinthos-crt-toggle svg {
+    display: none;
+}
+
+body[data-pd-crt="false"] .plinthos-crt-toggle__off {
+    display: inline;
+    animation: crt-shake 0.8s;
+}
+
+body[data-pd-crt="true"] .plinthos-crt-toggle__on {
+    display: inline;
+    animation: crt-shake 0.8s;
+}
+
+@keyframes crt-shake {
+    0% {
+        transform: translateX(0);
+        transform-origin: 20% 100%;
+        rotate: 0;
+    }
+    10% {
+        transform-origin: 20% 100%;
+        rotate: -20deg;
+    }
+    30% {
+        transform-origin: 20% 100%;
+        rotate: -25deg;
+    }
+    50% {
+        transform-origin: 20% 100%;
+        rotate: -20deg;
+    }
+    80% {
+        transform-origin: 80% 100%;
+        rotate: 20deg;
+    }
+    90% {
+        transform-origin: 20% 100%;
+        rotate: -10deg;
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.scroll-prompt {
+    position: fixed;
+    width: 16px;
+    height: 16px;
+    background: #02D7B2;
+    color: #212323;
+    z-index: 1000;
+    pointer-events: none;
+    z-index: 1000;
+    transform: translate(24px, 24px);
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-property: height, width;
+    transition-duration: 0.5s;
+}
+
+.scroll-prompt.scroll {
+    height: 48px;
+    width: 48px;
+    /* transform: translate(0, 0); */
+}
+
+.scroll-prompt.hide {
+    height: 0;
+    width: 0;
+    /* transform: translate(0, 0); */
+}
+
+.scroll-prompt svg {
+    opacity: 0;
+    height: 32px;
+    width: 32px;
+}
+
+.scroll-prompt.scroll svg {
+    opacity: 1;
+    animation: scroll-prompt 2s infinite;
+}
+
+@keyframes scroll-prompt {
+    0% {
+        opacity: 0;
+        transform: translateY(-32px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(32px);
+    }
+}

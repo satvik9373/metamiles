@@ -1,0 +1,365 @@
+.faqs-boxed{
+     padding: 160px 0;
+    position: relative;
+    z-index: 2;
+    overflow: inherit !important;
+    @media(max-width:768px){
+        @include padding-m;
+    }
+    .container{
+
+    }
+    .content{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        position: relative;
+        @media(max-width:768px){
+            display: block;
+        }
+        
+        .title{
+            width: 408px;
+            padding-top: 8px;
+            padding-left: 3px;
+            position: sticky;
+            top: 80px;
+            left: 0;
+            @media(max-width:992px){
+                width: 220px;
+            }
+            @media(max-width:768px){
+                width: 100%;
+                padding: 0;
+                position: static;
+            }
+        }
+        .faqs-items{
+            width: calc(100% - 448px);
+            max-width: 735px;
+            @media(max-width:992px){
+                width: calc(100% - 250px);
+            }
+            @media(max-width:768px){
+                width: 100%;
+                max-width: 100%;
+            }
+            .box{
+                background: $c-black;
+                border-radius: 24px;
+                padding: 48px 48px;
+                margin-bottom: 24px;
+                @media(max-width:992px){
+                    padding: 32px 32px;
+                }
+                @media(max-width:768px){
+                    padding: 24px 24px;
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                *{
+                    color: $c-white;
+                }
+                span{
+                    display: block;
+                    font-family: $f-vsb;
+                    @include size-32-10;
+                    color: $c-white;
+                    text-transform: uppercase;
+                    margin-bottom: 59px;
+                    @media (max-width: 992px) {
+        
+                        margin-bottom: 32px;
+                    }
+                    @media(max-width:768px){
+                        margin-bottom: 24px;
+                    }
+                }
+                h3{
+                    margin-bottom: 27px;
+                    @include size-56-11;
+                    letter-spacing: 0.04em;
+                    color: $c-green;
+                    line-height: 0.9;
+                    @media(max-width:768px){
+                        margin-bottom: 16px;
+                    }
+                }
+                p{
+                    margin-bottom: 16px;
+                }
+                ul li,ol li{
+                     padding-left: 24px;
+                     margin-bottom: 0;
+                }
+                p,ul li,ol li{
+                    
+                   
+                    &:last-child{
+                        margin-bottom: 0 !important;
+                    }
+                    &:before{
+                        background: $c-white;
+                        font-family: $f-sr;
+                         @include font;
+                         width: 6px;
+                         height: 6px;
+                    }
+                }
+                ul,ol{
+                    margin-bottom: 32px;
+                }
+                ol{
+                    padding-left: 7px;
+                    margin-bottom: 0;
+                    li{
+                        padding-left: 17px;
+                        margin-bottom: 1px;
+                    }
+                }
+                .link{
+                    //padding-top: 12px;
+                }
+            }
+        }
+    }
+    &.careers-style{
+        .content{
+            .title{
+                padding-top: 0;
+            }
+            .faqs-items{
+                max-width: 735px;
+                .box{
+                    @media(min-width:992px){
+                        padding: 50px 48px 52px 48px;
+                    }
+                    span{
+                        @include size-24-135;
+                        margin-bottom: 40px;
+                    }
+                    p{
+                        @include size-20-152;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+.faqs{
+    padding: 160px 0 160px 0;
+     position: relative;
+    z-index: 2;
+    overflow: inherit !important;
+    @media(max-width:992px){
+        padding: 100px 0;
+    }
+    @media(max-width:768px){
+        @include padding-m;
+    }
+    & + .title-and-btn{
+        margin-top: -42px;
+    position: relative;
+    z-index: 1;
+    }
+    .container{
+
+    }
+    .content{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        position: relative;
+        @media(max-width:768px){
+            display: block;
+        }
+        .title{
+            width: 408px;
+            padding-top: 8px;
+            padding-left: 3px;
+            position: sticky;
+            top: 80px;
+            left: 0;
+            @media(max-width:992px){
+                width: 220px;
+            }
+            @media(max-width:768px){
+                width: 100%;
+                padding: 0;
+                position: static;
+                margin-bottom: 24px;
+            }
+        }
+        .faqs-items{
+            width: calc(100% - 448px);
+            max-width: 735px;
+            @media(max-width:992px){
+                width: calc(100% - 250px);
+            }
+            @media(max-width:768px){
+                width: 100%;
+                max-width: 100%;
+            }
+            .box{
+                border-bottom: 1px solid $c-black;
+                &:first-child{
+                    border-top: 1px solid $c-black;
+                }
+                .faq-title{
+                    padding: 24px 68px 24px 0;
+                    position: relative;
+                    transition: all 0.2s;
+                    cursor: pointer;
+                    @media(max-width:768px){
+                        padding: 16px 48px 16px 0;
+                    }
+                    &:before,&:after{
+                        content: "";
+                        width: 24px;
+                        height: 2px;
+                        border-radius: 2px;
+                        background: $c-black;
+                        position: absolute;
+                        top: 50%;
+                        right: 7px;
+                        transition: all 0.2s;
+                        z-index: 1;
+                        pointer-events: none;
+                        transform: translate(0,-50%);
+                        
+                    }
+                    &:before{
+                        transform: translate(0,-50%) rotate(90deg);
+                    }
+                    &:hover{
+                        &:before,&:after{
+                            background: $c-green;
+                        }
+                        h3{
+                            color: $c-green;
+                        }
+                    }
+                    &.is-active{
+                        &:before{
+                            transform: translate(0,-50%) rotate(0deg);
+                        }
+                    }
+                    h3{
+                        font-family: $f-ssb;
+                        text-transform: inherit;
+                        @include size-24-135;
+                        letter-spacing: 0.01em;
+                        color: $c-black;
+                        margin: 0;
+                        padding: 4.2px 0;
+                        transition: all 0.2s;
+                    }
+                }
+                .faq-text{
+                    margin-top: -6px;
+                    padding-bottom: 24px;
+                    padding-right: 80px;
+                    display: none;
+                    p,ul li,ol li{
+                        color: $c-4d;
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    &.about-style{
+        .content{
+            margin-bottom: 21px;
+            @media(max-width:768px){
+                margin-bottom: 0;
+            }
+            .title{
+                padding-left: 0;
+                padding-top: 0;
+                position: static;
+                h2{
+                    margin-bottom: 36px;
+                }
+                p{
+                    color: $c-black;
+                    @include size-14-16;
+                }
+            }
+            .faqs-items{
+                border: 2px solid $c-black;
+                border-radius: 24px;
+                padding: 6px 0;
+                @media(max-width:768px){
+                    padding: 0;
+                }
+                .box{
+                    border-top: none;
+                    &:last-child{
+                        border-bottom: none;
+                    }
+                    .faq-title{
+                        padding: 20.5px 68px 20.5px 22px;
+                        @media(max-width:768px){
+                            padding-right: 40px;
+                        }
+                        &:before,&:after{
+                            width: 20px;
+                            right: 28px;
+                            @media(max-width:768px){
+                                right: 10px;
+                            }
+                        }
+                        &:before{
+                            transform: translate(0,-50%) rotate(90deg);
+                        }
+                        &.is-active{
+                            &:before{
+                                transform: translate(0,-50%) rotate(135deg);
+                            }
+                            &:after{
+                                transform: translate(0,-50%) rotate(45deg);
+                            }
+                        }
+                        h3{
+                            letter-spacing: 0;
+                            @include size-20-152;
+                            padding: 0;
+                        }
+                    }
+                    .faq-text{
+                        padding-left: 22px;
+                            margin-top: -11px;
+                        padding-bottom: 18px;
+                        @media(max-width:768px){
+                            padding-right: 40px;
+                        }
+                        p{
+                            color: $c-black;
+                            max-width: 493px;
+                            @include size-14-16;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.green-boxed{
+        .content .faqs-items .box .faq-title{
+            &:hover{
+                &:before,&:after{
+                            background: $c-white;
+                        }
+                h3{
+                    color: $c-white;
+                }
+            }
+        }
+    }
+}
